@@ -20,5 +20,5 @@ More information about the course can be found [STAT 545 @ The University of Bri
 _Links to the assigment folders will be added upon finishing_
 
 ## About me
-My name is Ivy Li. I am currently a Master's student studying food microbiology in the Food Science program. I am particularly interested in a foodbrone pathogen called _Campylobacter_, a group of pink, cut, picky bacteria!
-![Campylobacter jejuni](https://upload.wikimedia.org/wikipedia/commons/5/56/Campylobacteriosis.png)
+My name is Ivy Li. I am currently a Master's student studying food microbiology in the Food Science program. I am particularly interested in a foodbrone pathogen called _Campylobacter_, a group of pink, cut, **picky** bacteria! <br>
+In my spare time (~~though as a graduate student, shouldn't have much spare time! LOL~~), I like cooking, baking, and cycling.
