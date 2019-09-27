@@ -375,8 +375,8 @@ summary {
 <pre class="r"><code>library(gapminder)
 library (tidyverse)</code></pre>
 </div>
-<div id="exercise-1-basic-dplyr-use-dplyr-functions-to-achieve-the-following." class="section level3">
-<h3>Exercise 1: Basic dplyr: Use dplyr functions to achieve the following.</h3>
+<div id="exercise-1-basic-dplyr-use-dplyr-functions-to-achieve-the-following." class="section level2">
+<h2>Exercise 1: Basic <code>dplyr</code>: Use <code>dplyr</code> functions to achieve the following.</h2>
 <div id="use-filter-to-subset-the-gapminder-data-to-three-selected-countries-in-the-1970s." class="section level4">
 <h4>1.1 Use <code>filter()</code> to <em>subset</em> the <code>gapminder</code> data to three selected countries in the 1970’s.</h4>
 <ul>
@@ -446,7 +446,7 @@ library (tidyverse)</code></pre>
 </table>
 </div>
 <div id="use-the-pipe-operator-to-select-country-and-gdppercap-from-the-filtered-dataset-in-1.1" class="section level4">
-<h4>1.2 Use the pipe operator %&gt;% to select “country” and “gdpPercap” from the filtered dataset in 1.1</h4>
+<h4>1.2 Use the pipe operator <code>%&gt;%</code> to select “country” and “gdpPercap” from the filtered dataset in 1.1</h4>
 <table>
 <thead>
 <tr class="header">
@@ -483,7 +483,7 @@ library (tidyverse)</code></pre>
 </table>
 </div>
 <div id="filter-gapminder-to-all-entries-that-have-experienced-a-drop-in-life-expectancy." class="section level4">
-<h4>1.3 Filter gapminder to all entries that have experienced a drop in life expectancy.</h4>
+<h4>1.3 Filter <code>gapminder</code> to all entries that have experienced a drop in life expectancy.</h4>
 <pre class="r"><code>gapminder %&gt;%
   arrange(year) %&gt;% 
   group_by(country) %&gt;% 
@@ -2593,6 +2593,22 @@ library (tidyverse)</code></pre>
   theme_classic() +
   ylab(&quot;Life Expectancy&quot;)</code></pre>
 <p><img src="data:image/png;base64,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" /><!-- --></p>
+</div>
+</div>
+<div id="exercise-2-explore-individual-variables-with-dplyr" class="section level2">
+<h2>Exercise 2: Explore individual variables with <code>dplyr</code></h2>
+<div id="pick-one-categorical-variable-and-one-quantitative-variable-to-explore." class="section level4">
+<h4>Pick one categorical variable and one quantitative variable to explore.</h4>
+<ul>
+<li>Selected variables:
+<ul>
+<li>categorical variable: continent</li>
+<li>quantitative variable: lifeExp</li>
+</ul></li>
+</ul>
+</div>
+<div id="what-are-the-possible-values-of-each-variable" class="section level3">
+<h3>* What are the possible values of each variable?</h3>
 </div>
 </div>
 
