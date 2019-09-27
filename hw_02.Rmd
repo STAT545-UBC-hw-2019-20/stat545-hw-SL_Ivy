@@ -1,0 +1,78 @@
+---
+title: "Assignment 02: Explore Gapminder and use dplyr"
+author: "Ivy Li"
+date: "9/26/2019"
+output: 
+  html_document: 
+    keep_md: yes
+  pdf_document: 
+    keep_tex: yes
+---
+<!---The following chunk allows errors when knitting--->
+```{r allow errors, echo = FALSE}
+knitr::opts_chunk$set(error = TRUE, warning = FALSE)
+```
+
+#### Lading packages for the analysis
+```{r, warning=FALSE, message=FALSE}
+library(gapminder)
+library (tidyverse)
+```
+
+### Exercise 1: Basic dplyr: Use dplyr functions to achieve the following.
+
+#### 1.1 Use `filter()` to *subset* the `gapminder` data to three selected countries in the 1970’s.
+
+* Selected countries: Afghanistan, Albania, and Algeria
+
+```{r, echo=FALSE}
+gapminder %>%
+  filter(year < 1980 & year >1969, 
+         country == 'Afghanistan'| country== 'Albania' | country== 'Algeria') %>%
+  knitr::kable()
+```
+
+#### 1.2 Use the pipe operator %>% to select “country” and “gdpPercap” from the filtered dataset in 1.1
+
+```{r, echo=FALSE}
+gapminder %>%
+  filter(year < 1980 & year >1969, 
+         country == 'Afghanistan'| country== 'Albania' | country== 'Algeria') %>%
+  select(country, gdpPercap) %>%
+  knitr::kable()
+```
+
+#### 1.3 Filter gapminder to all entries that have experienced a drop in life expectancy.
+
+```{r}
+gapminder %>%
+  arrange(year) %>% 
+  group_by(country) %>% 
+  mutate(diff_LifeExp = lifeExp - lag(lifeExp)) %>% 
+  filter(diff_LifeExp < 0) %>% 
+  arrange(country) %>%
+  knitr::kable()
+```
+
+#### 1.4 The max GDP per capita experienced by each country.
+
+```{r}
+gapminder %>%
+  group_by(country) %>% 
+  filter(gdpPercap == max(gdpPercap)) %>% 
+  arrange(country) %>%
+  knitr::kable() 
+```
+
+#### 1.5 A scatterplot of Canada’s life expectancy vs. GDP per capita
+
+```{r}
+gapminder %>%
+  filter (country == 'Canada') %>%
+  ggplot(aes(gdpPercap, lifeExp))+
+  geom_point(alpha = 1, colour= 'purple')+
+  scale_x_log10("GDP per capita", labels = scales::dollar_format()) +
+  theme_classic() +
+  ylab("Life Expectancy")
+```
+
