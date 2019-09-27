@@ -83,4 +83,42 @@ gapminder %>%
   * categorical variable: continent
   * quantitative variable: lifeExp
 
-### * What are the possible values of each variable?
+### What are the possible values of each variable?
+1.1 *Continents* that contained in the `gapminder`:
+```{r, echo=FALSE}
+gapminder %>%
+  select(continent) %>%
+  summary()
+```
+
+1.2 The distribution of continents:
+```{r}
+gapminder %>%
+  ggplot(aes(continent)) +
+  geom_bar(colour = 'pink') +
+  theme_classic()+
+  xlab("Continent")+
+  ylab("Frequency")
+```
+
+
+2.1 The range of the *life expectabct* for `gapminder` data frame
+```{r}
+gapminder %>%
+  select(lifeExp) %>%
+  range()
+```
+
+
+2.2 The possible values of the *life expectancy* for the entire data frame:
+```{r, echo=FALSE}
+gapminder %>%
+  select(lifeExp) %>%
+  summary()
+```
+2.3 The mean of the *life expectancy*:
+```{r}
+mean(gapminder$lifeExp)
+```
+
+## Exercise 3: Explore various plot types
