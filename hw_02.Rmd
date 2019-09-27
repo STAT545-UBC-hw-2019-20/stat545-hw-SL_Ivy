@@ -122,3 +122,40 @@ mean(gapminder$lifeExp)
 ```
 
 ## Exercise 3: Explore various plot types
+
+* A scatterplot of two quantitative variables in `gapminder`
+```{r}
+gapminder %>%
+  filter(country == 'Canada')%>%
+  ggplot(aes(year, lifeExp)) +
+  geom_line(colour='pink') +
+  theme_classic()+
+  xlab("Year")+
+  ylab("lifeExp")+
+  ggtitle("Changes of life expectancy in Canada from 1952 to 2007")
+```
+
+* A scatterplot of two quantitative variables in `mtcars`
+
+The description of the dataset can be found in R-help by running the code below:
+```{r}
+?mtcars
+```
+To explore if there is a corelation between car weight and Miles/(US) gallon.
+```{r, message=FALSE}
+mtcars %>%
+  group_by(wt) %>% 
+  dplyr::summarise(mpgmean = mean(mpg)) %>%
+  plyr::arrange(desc(mpgmean))
+mtcars %>%
+  group_by(wt) %>%
+  ggplot(aes(wt, mpg)) +
+  geom_bin2d(colour='pink') +
+  theme_classic()+
+  xlab("Weight")+
+  ylab("Miles/(US) gallon")+
+  geom_smooth()+
+  ggtitle("Miles/(US) gallon by Weight")
+```
+
+
