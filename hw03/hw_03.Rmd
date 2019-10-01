@@ -48,6 +48,7 @@ ggplot(gapminder, aes(continent, gdpPercap, group = continent, colour = continen
 ```
 
 ### Task option 3
+
 * Look at the spread of GDP per capita within the continents
 Generate a table that summarise mean GDP per Cap for each continent:
 
@@ -60,10 +61,12 @@ knitr::kable(Mean_GDP, format = 'html', align ='c')
 ```
 
 
-
 * To zoom in to each continent by`subset`:
+
+**The table is too large, it has been hidden, the alternative table can be found in the following _tips_**
+
 For example, Asia: 
-```{r}
+```{r, include=FALSE}
 Asia_GDP <- subset.data.frame(gapminder, continent == 'Asia')
 knitr::kable(Asia_GDP, format = 'html', align ='c')
 ```
@@ -71,6 +74,7 @@ knitr::kable(Asia_GDP, format = 'html', align ='c')
 
 ## tips
 * Becasue the data table here is too large, the other useful package `kableExtra`can be used to generate a __shorter table__:
+
 ```{r, warning=FALSE, message=FALSE}
 library(kableExtra)
 #and then make the table again with kableExtra#
