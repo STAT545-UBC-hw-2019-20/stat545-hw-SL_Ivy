@@ -61,6 +61,10 @@ knitr::kable(Mean_GDP, format = 'html', align ='c')
 ```
 
 
+
+
+
+
 * To zoom in to each continent by`subset`:
 
 **The table is too large, it has been hidden, the alternative table can be found in the following _tips_**
