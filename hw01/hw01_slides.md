@@ -1,7 +1,6 @@
 ---
 title: 'Exercise 2: R Markdown for Gapminder exploration'
 author: "Ivy Li"
-date: "9/26/2019"
 output: 
   ioslides_presentation: 
     highlight: espresso
