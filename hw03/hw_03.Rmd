@@ -75,7 +75,7 @@ Mean_GDP <- gapminder %>%
   group_by(continent) %>%
   select(continent, gdpPercap)%>%
   summarise_all("mean")
-DT::datatable (Mean_GDP, colnames = c('Continent'='continent', 'Mean GDP per Cap' = 'gdpPercap'))
+knitr::kable(Mean_GDP, format = 'html', align ='c')
 
 
 ```
