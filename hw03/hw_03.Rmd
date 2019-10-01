@@ -66,7 +66,7 @@ knitr::kable(Mean_GDP, format = 'html', align ='c')
 **The table is too large, it has been hidden, the alternative table can be found in the following _tips_**
 
 For example, Asia: 
-```{r, include=FALSE}
+```{r, results ='hide'}
 Asia_GDP <- subset.data.frame(gapminder, continent == 'Asia')
 knitr::kable(Asia_GDP, format = 'html', align ='c')
 ```
