@@ -13,25 +13,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Setup
 Make sure `gapminder` and `tidyverse` packages are installed.
 Load them with the following code:
+
 ```{r, message=FALSE, warning=FALSE}
 library(gapminder)
 library(tidyverse)
 ```
-
-
-### Task Option 1
-
-Report the absolute and/or relative abundance of countries with low life expectancy over time by continent: how many countries on each continent have a life expectancy less than *27*, for each year.
-
-```{r}
-gapminder %>%
-  select (lifeExp, year) %>%
-  group_by(year) %>%
-  arrange (year)
-
-  
-```
-
 
 ### Task Option 2
 Get the maximum and minimum of GDP per capita for all continents.
@@ -52,7 +38,7 @@ ggplot(GDP_summary, aes(x=continent)) +
   ggtitle("Maximum and MInimumGDP Per Capita") 
 ```
 
-Or can use the `geom_boxplot` to obtain a more comprehensive figure:
+* Or to use the `geom_boxplot` to obtain a more comprehensive figure:
 ```{r echo=FALSE}
 ggplot(gapminder, aes(continent, gdpPercap, group = continent, colour = continent)) +
   geom_boxplot() +
@@ -65,25 +51,56 @@ ggplot(gapminder, aes(continent, gdpPercap, group = continent, colour = continen
 * Look at the spread of GDP per capita within the continents
 Generate a table that summarise mean GDP per Cap for each continent:
 
-
-
-
-
-
 ```{r}
 Mean_GDP <- gapminder %>%
   group_by(continent) %>%
   select(continent, gdpPercap)%>%
   summarise_all("mean")
 knitr::kable(Mean_GDP, format = 'html', align ='c')
-
-
 ```
 
-To zoom in to each continent by`subset`:
+
+
+* To zoom in to each continent by`subset`:
 For example, Asia: 
 ```{r}
 Asia_GDP <- subset.data.frame(gapminder, continent == 'Asia')
 knitr::kable(Asia_GDP, format = 'html', align ='c')
 ```
 
+
+## tips
+* Becasue the data table here is too large, the other useful package `kableExtra`can be used to generate a __shorter table__:
+```{r, warning=FALSE, message=FALSE}
+library(kableExtra)
+#and then make the table again with kableExtra#
+knitr::kable(Asia_GDP, format = 'html', align ='c')%>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+```
+
+<br>
+_All the other continents can be reviewed by the method above by using corresponding name._
+
+
+* To generate a group of figure to get a overview of the GDP per capita within the continents from 1952 to 2007.
+```{r}
+ggplot(gapminder, aes(x = year, y = gdpPercap, colour = country)) + geom_line() + scale_y_log10() + facet_wrap(~ continent)+theme(legend.position = "none", axis.title.x=element_blank(), axis.text.x=element_blank(), axis.ticks.x=element_blank())
+```
+
+### Task option 5
+How is life expectancy changing over time on different continents?
+
+1. Find the median and life expectancy for each continent from 1952 to 2007:
+
+```{r}
+change_lifeExp <-gapminder %>%
+  group_by(continent, year) %>%
+  select (continent, year, lifeExp)%>%
+  summarize(Median_LifeExp = median(lifeExp), Mean_lifeExp = mean(lifeExp))
+knitr::kable(change_lifeExp, format = 'html', align ='c')
+```
+
+```{r figure}
+# Create a scatter plot showing the change in medianLifeExp over time
+ggplot(change_lifeExp, aes(x = year, y = Mean_lifeExp, color = continent)) + geom_line() + scale_x_log10()
+```
