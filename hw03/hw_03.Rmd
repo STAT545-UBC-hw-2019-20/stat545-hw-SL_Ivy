@@ -1,0 +1,82 @@
+---
+title: "Assignment 3"
+author: "SL_Ivy"
+output: 
+  html_document: 
+    keep_md: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Setup
+Make sure `gapminder` and `tidyverse` packages are installed.
+Load them with the following code:
+```{r, message=FALSE, warning=FALSE}
+library(gapminder)
+library(tidyverse)
+```
+
+
+### Task Option 1
+
+Report the absolute and/or relative abundance of countries with low life expectancy over time by continent: how many countries on each continent have a life expectancy less than *27*, for each year.
+
+```{r}
+gapminder %>%
+  select (lifeExp, year) %>%
+  group_by(year) %>%
+  arrange (year)
+
+  
+```
+
+
+### Task Option 2
+Get the maximum and minimum of GDP per capita for all continents.
+```{r}
+GDP_summary <- gapminder %>%
+  select (continent, gdpPercap) %>%
+  group_by(continent) %>%
+  summarise(Max_GDP=max(gdpPercap), Min_GDP=min(gdpPercap))
+knitr::kable(GDP_summary, format = 'html', align ='c')
+```
+
+To obtain a simple figure that only show the Maximum and Minimum values:
+```{r}
+ggplot(GDP_summary, aes(x=continent)) + 
+  geom_jitter(aes(y=Max_GDP, color="Max_GDP")) + 
+  geom_jitter(aes(y=Min_GDP, color="Min_GDP"))+
+  scale_y_log10(labels = scales::comma_format())+
+  ggtitle("Maximum and MInimumGDP Per Capita") 
+```
+
+Or can use the `geom_boxplot` to obtain a more comprehensive figure:
+```{r echo=FALSE}
+ggplot(gapminder, aes(continent, gdpPercap, group = continent, colour = continent)) +
+  geom_boxplot() +
+  scale_y_log10(labels = scales::comma_format()) +
+  ggtitle("Maximum and MInimumGDP Per Capita")
+  
+```
+
+### Task option 3
+* Look at the spread of GDP per capita within the continents
+
+Generate a table that summarise mean GDP per Cap for each continent:
+
+```{r}
+GDP = aggregate(. ~ continent, data = gapminder, FUN = mean)%>%
+  select (continent, gdpPercap)
+DT::datatable (GDP, colnames = c('Continent'='continent', 'Mean GDP per Cap' = 'gdpPercap'))
+
+```
+
+To zoom in to each continent by`subset`:
+For example, Asia: 
+```{r}
+Asia_GDP <- subset.data.frame(gapminder, continent == 'Asia')
+DT::datatable (Asia_GDP)
+```
+
