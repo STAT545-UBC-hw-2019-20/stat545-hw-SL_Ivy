@@ -1,12 +1,11 @@
 ---
 title: 'Exercise 2: R Markdown for Gapminder exploration'
 author: "Ivy Li"
-date: "9/26/2019"
 output:
-  word_document:
-    toc: yes
   html_document:
     df_print: paged
+    toc: yes
+  word_document:
     toc: yes
   github_document:
     toc: yes

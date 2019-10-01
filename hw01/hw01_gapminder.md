@@ -1,7 +1,6 @@
 Exercise 2: R Markdown for Gapminder exploration
 ================
 Ivy Li
-9/26/2019
 
   - [About the “gapminder”](#about-the-gapminder)
   - [Useful Functions for Exploring Data
