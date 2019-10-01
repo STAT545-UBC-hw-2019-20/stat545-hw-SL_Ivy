@@ -1,2 +1,2 @@
 ###
-The [link](https://github.com/STAT545-UBC-hw-2019-20/stat545-hw-SL-Ivy/blob/master/hw03/hw_03.md) to hw03 page.
+The [link](https://stat545-ubc-hw-2019-20.github.io/stat545-hw-SL-Ivy/hw03/hw_03.html) to hw03 page.
