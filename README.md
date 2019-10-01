@@ -13,7 +13,7 @@ More information about the course can be found [STAT 545 @ The University of Bri
 | ------------- |:---------:|
 |  Assigment 1  | hw1       |
 |  Assigment 2  | hw2       |
-|  Assigment 3  | hw3       |
+|  Assigment 3  | [hw3](https://stat545-ubc-hw-2019-20.github.io/stat545-hw-SL-Ivy/hw03/hw_03.html)       |
 |  Assigment 4  | hw4       |
 |  Assigment 5  | hw5       |<br>
 
