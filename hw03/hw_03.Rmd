@@ -75,10 +75,10 @@ knitr::kable(Asia_GDP, format = 'html', align ='c')
 library(kableExtra)
 #and then make the table again with kableExtra#
 knitr::kable(Asia_GDP, format = 'html', align ='c')%>%
-  kable_styling(bootstrap_options = c("striped", "hover", "condensed"))
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed","response"))
 ```
 
-<br>
+
 _All the other continents can be reviewed by the method above by using corresponding name._
 
 
