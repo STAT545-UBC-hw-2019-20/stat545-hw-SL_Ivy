@@ -63,13 +63,20 @@ ggplot(gapminder, aes(continent, gdpPercap, group = continent, colour = continen
 
 ### Task option 3
 * Look at the spread of GDP per capita within the continents
-
 Generate a table that summarise mean GDP per Cap for each continent:
 
+
+
+
+
+
 ```{r}
-GDP = aggregate(. ~ continent, data = gapminder, FUN = mean)%>%
-  select (continent, gdpPercap)
-DT::datatable (GDP, colnames = c('Continent'='continent', 'Mean GDP per Cap' = 'gdpPercap'))
+Mean_GDP <- gapminder %>%
+  group_by(continent) %>%
+  select(continent, gdpPercap)%>%
+  summarise_all("mean")
+DT::datatable (Mean_GDP, colnames = c('Continent'='continent', 'Mean GDP per Cap' = 'gdpPercap'))
+
 
 ```
 
