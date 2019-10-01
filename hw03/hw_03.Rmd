@@ -84,6 +84,6 @@ To zoom in to each continent by`subset`:
 For example, Asia: 
 ```{r}
 Asia_GDP <- subset.data.frame(gapminder, continent == 'Asia')
-DT::datatable (Asia_GDP)
+knitr::kable(Asia_GDP, format = 'html', align ='c')
 ```
 
