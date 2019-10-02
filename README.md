@@ -26,6 +26,6 @@ In my spare time (~~though as a graduate student, I shouldn't have much spare ti
 ![Rearch in Peace](https://i.pinimg.com/originals/7b/21/95/7b21952354e015640a2e496a8b13a31c.jpg)
 
 ### Useful things for the Assignments
-1. Add *https://stat545-ubc-hw-2019-20.github.io/stat545-hw-SL-Ivy/* before the file path to generate a web page.
+1. Add *https://stat545-ubc-hw-2019-20.github.io/stat545-hw-SL_Ivy/* before the file path to generate a web page.
 2. [Troubleshooting Jekyll build errors for GitHub Pages sites](https://help.github.com/en/articles/troubleshooting-jekyll-build-errors-for-github-pages-sites#invalid-post-date): 
      * The one happened [Invalid post date](https://help.github.com/en/articles/troubleshooting-jekyll-build-errors-for-github-pages-sites#invalid-post-date)
