@@ -28,7 +28,7 @@ library (tidyverse)
 gapminder %>%
   filter(year < 1980 & year >1969, 
          country == 'Afghanistan'| country== 'Albania' | country== 'Algeria') %>%
-  knitr::kable()
+  knitr::kable(format = 'html', align = 'c')
 ```
 
 #### 1.2 Use the pipe operator `%>%` to select “country” and “gdpPercap” from the filtered dataset in 1.1
@@ -38,7 +38,7 @@ gapminder %>%
   filter(year < 1980 & year >1969, 
          country == 'Afghanistan'| country== 'Albania' | country== 'Algeria') %>%
   select(country, gdpPercap) %>%
-  knitr::kable()
+  knitr::kable(format = 'html', align = 'c')
 ```
 
 #### 1.3 Filter `gapminder` to all entries that have experienced a drop in life expectancy.
@@ -50,7 +50,7 @@ gapminder %>%
   mutate(diff_LifeExp = lifeExp - lag(lifeExp)) %>% 
   filter(diff_LifeExp < 0) %>% 
   arrange(country) %>%
-  knitr::kable()
+  knitr::kable(format = 'html', align = 'c')
 ```
 
 #### 1.4 The max GDP per capita experienced by each country.
@@ -60,7 +60,7 @@ gapminder %>%
   group_by(country) %>% 
   filter(gdpPercap == max(gdpPercap)) %>% 
   arrange(country) %>%
-  knitr::kable() 
+  knitr::kable(format = 'html', align = 'c') 
 ```
 
 #### 1.5 A scatterplot of Canada’s life expectancy vs. GDP per capita
