@@ -23,5 +23,7 @@ _Links to the assigment folders will be added upon finishing_
 My name is Ivy Li. I am currently a Master's student studying food microbiology in the Food Science program. I am particularly interested in a foodbrone pathogen called _Campylobacter_, a group of pink, cut, **picky** bacteria! <br>
 In my spare time (~~though as a graduate student, I shouldn't have much spare time! LOL~~:bowtie:), I like cooking, baking, and cycling.
 
+![Rearch in Peace](https://i.pinimg.com/originals/7b/21/95/7b21952354e015640a2e496a8b13a31c.jpg)
+
 ### Useful things for the Assignments
 1. Add *https://stat545-ubc-hw-2019-20.github.io/stat545-hw-SL-Ivy/* before the file path to generate a web page.
