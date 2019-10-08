@@ -1,0 +1,99 @@
+---
+title: "hw_04:Tidy data and joins"
+author: "SL_Ivy"
+output: 
+  html_document: 
+    keep_md: yes
+    theme: paper
+---
+## Goal
+
+The goal of this homework is to solidify the data wrangling skills by working some realistic problems in the grey area between data aggregation and data reshaping.
+`gapminder` data frame will be used to practice the data reshaping and table joins.
+
+
+
+## Setup the working environment for the data analysis
+Make sure `gapminder`, `tidyverse`, and `DT` packages are installed.
+Load them with the following code:
+```{r, warning = FALSE, message = FALSE}
+library(gapminder)
+library(tidyverse)
+library(DT)
+```
+
+## Exercise 1: Univariate Data Reshaping
+
+#### Exercise 1.1: Make a tibble with one row per **year**, and columns for **life expectancy** and **GDP per capita** for *Canada* and *United Kingdom*.
+```{r}
+gap_wider <- gapminder %>%
+  filter(year, country=='Canada' | country =="United Kingdom")%>%
+  pivot_wider(id_cols     = year, 
+              names_from  = country, 
+              values_from = lifeExp) %>%
+  as_tibble()
+print(gap_wider)
+```
+
+
+#### Exercise 1.2 Producing a scatterplot of life expectancy for *Canada* against *that of *United Kingdom*.
+
+
+```{r}
+gap_wider %>% 
+  ggplot(aes(x=Canada, y=`United Kingdom`)) +
+  geom_point(size=2, color='blue') +
+  xlab("Canada Life Expectancy (years)") +
+  ylab("Mexico Life Expectancy (years)" ) +
+  ggtitle("Life Expectancy of Canada vs. United Kingdom")+
+  theme_bw()
+```
+
+
+#### Exercise 1.3 Re-length the data
+```{r}
+gap_wider %>% 
+  pivot_longer(cols = c(-year), names_to  = "country", values_to = "LifeExp") %>%
+  DT::datatable()
+```
+
+
+## Exercise 2: Multivariate Data Reshaping
+
+#### Exercise 2.1: Make a tibble with one row per **year**, and columns for **life expectancy** and **GDP per capita** for *Canada* and *United Kingdom*.
+
+```{r}
+gap_multiwider <- gapminder %>%
+  filter(year, country=='Canada' | country =="United Kingdom")%>%
+  pivot_wider(id_cols     = year,
+              names_from  = country,
+              names_sep = " in ",
+              values_from = c(lifeExp, gdpPercap)) %>%
+  as_tibble()
+print(gap_multiwider)
+```
+
+
+#### Exercise 2.2 Re-length the data
+```{r}
+gap_multiwider %>% 
+  pivot_longer(cols = -year, names_to  = c(".value",  "country"), names_sep = ' in ') %>%
+  DT::datatable()
+```
+
+
+## Exercise 3: Table Joins 
+
+Read in the made-up wedding guestlist and email addresses using the following lines:
+
+```{r}
+guest <- read_csv("https://raw.githubusercontent.com/STAT545-UBC/Classroom/master/data/wedding/attend.csv")
+email <- read_csv("https://raw.githubusercontent.com/STAT545-UBC/Classroom/master/data/wedding/emails.csv")
+```
+
+#### Exercise 3.1: For each guest in the guestlist (guest tibble), add a column for email address, which can be found in the email tibble.
+
+```{r}
+
+```
+
