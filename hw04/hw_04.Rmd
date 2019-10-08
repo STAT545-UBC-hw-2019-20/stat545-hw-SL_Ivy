@@ -4,10 +4,7 @@ author: "SL_Ivy"
 output: 
   html_document:
     keep_md: TRUE
-    theme: paper
-    toc: TRUE
-    toc_depth: 2
-    toc_float: TRUE
+    toc: true
 ---
 ## Goal
 
