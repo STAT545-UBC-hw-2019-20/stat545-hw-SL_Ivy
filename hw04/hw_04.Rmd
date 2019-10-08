@@ -1,12 +1,14 @@
 ---
 title: "hw_04:Tidy data and joins"
 author: "SL_Ivy"
-output: 
-  html_document: 
-    keep_md: yes
+always_allow_html: true
+output:
   github_document:
     toc: true
     toc_depth: 2
+  html_document: 
+    keep_md: yes
+    
 ---
 ## Goal
 
