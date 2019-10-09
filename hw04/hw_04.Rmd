@@ -3,12 +3,12 @@ title: "hw_04:Tidy data and joins"
 author: "SL_Ivy"
 always_allow_html: true
 output:
-  html_document: 
-    
-    keep_md: yes
   github_document:
     toc: true
     toc_depth: 2
+  html_document: 
+    
+    keep_md: yes
 ---
 ## Goal
 
@@ -27,6 +27,11 @@ library(DT)
 ```
 
 ## Exercise 1: Univariate Data Reshaping
+
+The Exercise 1 and 2 need to use the date frame `gapminder`. It would be better to check the structure of this data frame before we get start.
+```{r}
+gapminder
+```
 
 #### Exercise 1.1: Make a tibble with one row per **year**, and columns for **life expectancy** and **GDP per capita** for *Canada* and *United Kingdom*.
 ```{r}
@@ -87,7 +92,7 @@ gap_multiwider %>%
 
 
 ## Exercise 3: Table Joins 
-
+* First, we need to load the data for this practice session.
 Read in the made-up wedding guestlist and email addresses using the following lines:
 
 ```{r}
@@ -95,9 +100,55 @@ guest <- read_csv("https://raw.githubusercontent.com/STAT545-UBC/Classroom/maste
 email <- read_csv("https://raw.githubusercontent.com/STAT545-UBC/Classroom/master/data/wedding/emails.csv")
 ```
 
-#### Exercise 3.1: For each guest in the guestlist (guest tibble), add a column for email address, which can be found in the email tibble.
-
+After load the data, we can check the data by calling their assigned name.
+* The guest 
 ```{r}
-
+guest
 ```
 
+The email
+```{r}
+email
+```
+
+#### Exercise 3.1: For each guest in the guestlist (guest tibble), add a column for email address, which can be found in the email tibble.
+
+It can be found that the in the `email` tibble, there are mutiple guest sharing one email address, but all the other guests' information stored in the guest tibble are based on the individual guest.
+Also, the column name in `email` that stores the guests' name is called *guest* other than *name* in the `guest`.
+In order to join two tibbles, the variables in the `email` tibble need to be reshaped and renamed to match the `guest` tibble.
+Each name in the same row is separated by ", ", so we can split one row based on this `sep=", ". **Pay attention to the space after the comma**
+
+```{r separate email rows}
+email_shaped <- email %>% 
+  separate_rows(guest, sep = ", ") %>%
+  rename(name = guest)%>%
+  as_tibble()
+```
+
+To add the email for each guest in the `guest` tibble
+
+```{r}
+guest  %>%
+  left_join(email_shaped, by = "name")
+DT::datatable(guest)
+```
+
+
+#### Exercise 3.2: To figure out the guests that appears in the `email` tibble but no in the guestlist, or say `guest` tibble.
+
+```{r}
+email_shaped %>%
+  anti_join(guest, by = "name")
+```
+
+Those are the three guests that somehow haven't been added to the guestlist.
+
+#### Exercise 3.3: Make a guestlist that includes everyone we have emails for (in addition to those on the original guestlist).
+
+```{r}
+guest_new <-guest %>%
+  full_join(email_shaped, by = "name")
+DT::datatable(guest_new)
+```
+
+Here are the new guestlist that contains everyone we have emails for.
