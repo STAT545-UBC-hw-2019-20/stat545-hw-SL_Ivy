@@ -14,7 +14,7 @@ More information about the course can be found [STAT 545 @ The University of Bri
 |  Assigment 1  | [hw1](https://stat545-ubc-hw-2019-20.github.io/stat545-hw-SL_Ivy/hw01/hw01_gapminder.html)       |
 |  Assigment 2  | [hw2](https://stat545-ubc-hw-2019-20.github.io/stat545-hw-SL_Ivy/hw02/hw_02.html)       |
 |  Assigment 3  | [hw3](https://stat545-ubc-hw-2019-20.github.io/stat545-hw-SL_Ivy/hw03/hw_03.html)       |
-|  Assigment 4  | hw4       |
+|  Assigment 4  | [hw4](https://stat545-ubc-hw-2019-20.github.io/stat545-hw-SL_Ivy/hw04/hw_04.html)       |
 |  Assigment 5  | hw5       |<br>
 
 _Links to the assigment folders will be added upon finishing_
