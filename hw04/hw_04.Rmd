@@ -3,10 +3,10 @@ title: "hw_04:Tidy data and joins"
 author: "SL_Ivy"
 always_allow_html: true
 output:
+  github_document:
+    toc: false
   html_document: 
     keep_md: yes
-  github_document:
-    toc: fause
 ---
 ## Goal
 
@@ -43,7 +43,7 @@ print(gap_wider)
 ```
 
 
-#### Exercise 1.2 Producing a scatterplot of life expectancy for *Canada* against *that of *United Kingdom*.
+#### Exercise 1.2 Producing a scatterplot of life expectancy for *Canada* against that of *United Kingdom*.
 
 
 ```{r}
