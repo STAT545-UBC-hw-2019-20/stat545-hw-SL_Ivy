@@ -1,13 +1,11 @@
 ---
 title: "hw_04:Tidy data and joins"
 author: "SL_Ivy"
-always_allow_html: true
-output:
-  github_document:
+output: 
+  html_document:
     toc: true
-    toc_depth: 2
-  html_document: 
-    keep_md: yes
+    toc_float: true
+
 ---
 ## Goal
 
@@ -100,6 +98,7 @@ email <- read_csv("https://raw.githubusercontent.com/STAT545-UBC/Classroom/maste
 ```
 
 After load the data, we can check the data by calling their assigned name.
+
 * The guest 
 ```{r}
 guest
@@ -120,8 +119,7 @@ Each name in the same row is separated by ", ", so we can split one row based on
 ```{r separate email rows}
 email_shaped <- email %>% 
   separate_rows(guest, sep = ", ") %>%
-  rename(name = guest)%>%
-  as_tibble()
+  rename(name = guest)
 ```
 
 To add the email for each guest in the `guest` tibble
