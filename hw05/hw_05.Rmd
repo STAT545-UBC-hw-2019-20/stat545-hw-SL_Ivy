@@ -1,0 +1,24 @@
+---
+title: "hw_05: Factor and figure management"
+author: "SL_Ivy"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Goal
+
+The goal of this homework is to get expand the thinking about data portability, collaboration, and dissemination.
+
+## Setup the working environment for the data analysis
+Make sure `gapminder`, `tidyverse`, and `DT` packages are installed.
+Load them with the following code:
+
+
+
+## Exercise 1: Explain the value of the here::here package
+
+
+## Exercise 2:
