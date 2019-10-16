@@ -2,10 +2,9 @@
 title: "hw_04:Tidy data and joins"
 author: "SL_Ivy"
 output: 
-  html_document:
-    toc: true
-    toc_float: true
-
+  html_document: 
+    toc: yes
+    toc_float: yes
 ---
 ## Goal
 
@@ -125,9 +124,9 @@ email_shaped <- email %>%
 To add the email for each guest in the `guest` tibble
 
 ```{r}
-guest  %>%
+guest_joined <- guest  %>%
   left_join(email_shaped, by = "name")
-DT::datatable(guest)
+DT::datatable(guest_joined)
 ```
 
 

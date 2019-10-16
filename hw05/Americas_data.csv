@@ -1,0 +1,301 @@
+continent,country,year,gdpPercap
+Americas,Argentina,1952,5911.315053
+Americas,Argentina,1957,6856.856212
+Americas,Argentina,1962,7133.166023
+Americas,Argentina,1967,8052.953021
+Americas,Argentina,1972,9443.038526
+Americas,Argentina,1977,10079.02674
+Americas,Argentina,1982,8997.897412
+Americas,Argentina,1987,9139.671389
+Americas,Argentina,1992,9308.41871
+Americas,Argentina,1997,10967.28195
+Americas,Argentina,2002,8797.640716
+Americas,Argentina,2007,12779.37964
+Americas,Bolivia,1952,2677.326347
+Americas,Bolivia,1957,2127.686326
+Americas,Bolivia,1962,2180.972546
+Americas,Bolivia,1967,2586.886053
+Americas,Bolivia,1972,2980.331339
+Americas,Bolivia,1977,3548.097832
+Americas,Bolivia,1982,3156.510452
+Americas,Bolivia,1987,2753.69149
+Americas,Bolivia,1992,2961.699694
+Americas,Bolivia,1997,3326.143191
+Americas,Bolivia,2002,3413.26269
+Americas,Bolivia,2007,3822.137084
+Americas,Brazil,1952,2108.944355
+Americas,Brazil,1957,2487.365989
+Americas,Brazil,1962,3336.585802
+Americas,Brazil,1967,3429.864357
+Americas,Brazil,1972,4985.711467
+Americas,Brazil,1977,6660.118654
+Americas,Brazil,1982,7030.835878
+Americas,Brazil,1987,7807.095818
+Americas,Brazil,1992,6950.283021
+Americas,Brazil,1997,7957.980824
+Americas,Brazil,2002,8131.212843
+Americas,Brazil,2007,9065.800825
+Americas,Canada,1952,11367.16112
+Americas,Canada,1957,12489.95006
+Americas,Canada,1962,13462.48555
+Americas,Canada,1967,16076.58803
+Americas,Canada,1972,18970.57086
+Americas,Canada,1977,22090.88306
+Americas,Canada,1982,22898.79214
+Americas,Canada,1987,26626.51503
+Americas,Canada,1992,26342.88426
+Americas,Canada,1997,28954.92589
+Americas,Canada,2002,33328.96507
+Americas,Canada,2007,36319.23501
+Americas,Chile,1952,3939.978789
+Americas,Chile,1957,4315.622723
+Americas,Chile,1962,4519.094331
+Americas,Chile,1967,5106.654313
+Americas,Chile,1972,5494.024437
+Americas,Chile,1977,4756.763836
+Americas,Chile,1982,5095.665738
+Americas,Chile,1987,5547.063754
+Americas,Chile,1992,7596.125964
+Americas,Chile,1997,10118.05318
+Americas,Chile,2002,10778.78385
+Americas,Chile,2007,13171.63885
+Americas,Colombia,1952,2144.115096
+Americas,Colombia,1957,2323.805581
+Americas,Colombia,1962,2492.351109
+Americas,Colombia,1967,2678.729839
+Americas,Colombia,1972,3264.660041
+Americas,Colombia,1977,3815.80787
+Americas,Colombia,1982,4397.575659
+Americas,Colombia,1987,4903.2191
+Americas,Colombia,1992,5444.648617
+Americas,Colombia,1997,6117.361746
+Americas,Colombia,2002,5755.259962
+Americas,Colombia,2007,7006.580419
+Americas,Costa Rica,1952,2627.009471
+Americas,Costa Rica,1957,2990.010802
+Americas,Costa Rica,1962,3460.937025
+Americas,Costa Rica,1967,4161.727834
+Americas,Costa Rica,1972,5118.146939
+Americas,Costa Rica,1977,5926.876967
+Americas,Costa Rica,1982,5262.734751
+Americas,Costa Rica,1987,5629.915318
+Americas,Costa Rica,1992,6160.416317
+Americas,Costa Rica,1997,6677.045314
+Americas,Costa Rica,2002,7723.447195
+Americas,Costa Rica,2007,9645.06142
+Americas,Cuba,1952,5586.53878
+Americas,Cuba,1957,6092.174359
+Americas,Cuba,1962,5180.75591
+Americas,Cuba,1967,5690.268015
+Americas,Cuba,1972,5305.445256
+Americas,Cuba,1977,6380.494966
+Americas,Cuba,1982,7316.918107
+Americas,Cuba,1987,7532.924763
+Americas,Cuba,1992,5592.843963
+Americas,Cuba,1997,5431.990415
+Americas,Cuba,2002,6340.646683
+Americas,Cuba,2007,8948.102923
+Americas,Dominican Republic,1952,1397.717137
+Americas,Dominican Republic,1957,1544.402995
+Americas,Dominican Republic,1962,1662.137359
+Americas,Dominican Republic,1967,1653.723003
+Americas,Dominican Republic,1972,2189.874499
+Americas,Dominican Republic,1977,2681.9889
+Americas,Dominican Republic,1982,2861.092386
+Americas,Dominican Republic,1987,2899.842175
+Americas,Dominican Republic,1992,3044.214214
+Americas,Dominican Republic,1997,3614.101285
+Americas,Dominican Republic,2002,4563.808154
+Americas,Dominican Republic,2007,6025.374752
+Americas,Ecuador,1952,3522.110717
+Americas,Ecuador,1957,3780.546651
+Americas,Ecuador,1962,4086.114078
+Americas,Ecuador,1967,4579.074215
+Americas,Ecuador,1972,5280.99471
+Americas,Ecuador,1977,6679.62326
+Americas,Ecuador,1982,7213.791267
+Americas,Ecuador,1987,6481.776993
+Americas,Ecuador,1992,7103.702595
+Americas,Ecuador,1997,7429.455877
+Americas,Ecuador,2002,5773.044512
+Americas,Ecuador,2007,6873.262326
+Americas,El Salvador,1952,3048.3029
+Americas,El Salvador,1957,3421.523218
+Americas,El Salvador,1962,3776.803627
+Americas,El Salvador,1967,4358.595393
+Americas,El Salvador,1972,4520.246008
+Americas,El Salvador,1977,5138.922374
+Americas,El Salvador,1982,4098.344175
+Americas,El Salvador,1987,4140.442097
+Americas,El Salvador,1992,4444.2317
+Americas,El Salvador,1997,5154.825496
+Americas,El Salvador,2002,5351.568666
+Americas,El Salvador,2007,5728.353514
+Americas,Guatemala,1952,2428.237769
+Americas,Guatemala,1957,2617.155967
+Americas,Guatemala,1962,2750.364446
+Americas,Guatemala,1967,3242.531147
+Americas,Guatemala,1972,4031.408271
+Americas,Guatemala,1977,4879.992748
+Americas,Guatemala,1982,4820.49479
+Americas,Guatemala,1987,4246.485974
+Americas,Guatemala,1992,4439.45084
+Americas,Guatemala,1997,4684.313807
+Americas,Guatemala,2002,4858.347495
+Americas,Guatemala,2007,5186.050003
+Americas,Haiti,1952,1840.366939
+Americas,Haiti,1957,1726.887882
+Americas,Haiti,1962,1796.589032
+Americas,Haiti,1967,1452.057666
+Americas,Haiti,1972,1654.456946
+Americas,Haiti,1977,1874.298931
+Americas,Haiti,1982,2011.159549
+Americas,Haiti,1987,1823.015995
+Americas,Haiti,1992,1456.309517
+Americas,Haiti,1997,1341.726931
+Americas,Haiti,2002,1270.364932
+Americas,Haiti,2007,1201.637154
+Americas,Honduras,1952,2194.926204
+Americas,Honduras,1957,2220.487682
+Americas,Honduras,1962,2291.156835
+Americas,Honduras,1967,2538.269358
+Americas,Honduras,1972,2529.842345
+Americas,Honduras,1977,3203.208066
+Americas,Honduras,1982,3121.760794
+Americas,Honduras,1987,3023.096699
+Americas,Honduras,1992,3081.694603
+Americas,Honduras,1997,3160.454906
+Americas,Honduras,2002,3099.72866
+Americas,Honduras,2007,3548.330846
+Americas,Jamaica,1952,2898.530881
+Americas,Jamaica,1957,4756.525781
+Americas,Jamaica,1962,5246.107524
+Americas,Jamaica,1967,6124.703451
+Americas,Jamaica,1972,7433.889293
+Americas,Jamaica,1977,6650.195573
+Americas,Jamaica,1982,6068.05135
+Americas,Jamaica,1987,6351.237495
+Americas,Jamaica,1992,7404.923685
+Americas,Jamaica,1997,7121.924704
+Americas,Jamaica,2002,6994.774861
+Americas,Jamaica,2007,7320.880262
+Americas,Mexico,1952,3478.125529
+Americas,Mexico,1957,4131.546641
+Americas,Mexico,1962,4581.609385
+Americas,Mexico,1967,5754.733883
+Americas,Mexico,1972,6809.40669
+Americas,Mexico,1977,7674.929108
+Americas,Mexico,1982,9611.147541
+Americas,Mexico,1987,8688.156003
+Americas,Mexico,1992,9472.384295
+Americas,Mexico,1997,9767.29753
+Americas,Mexico,2002,10742.44053
+Americas,Mexico,2007,11977.57496
+Americas,Nicaragua,1952,3112.363948
+Americas,Nicaragua,1957,3457.415947
+Americas,Nicaragua,1962,3634.364406
+Americas,Nicaragua,1967,4643.393534
+Americas,Nicaragua,1972,4688.593267
+Americas,Nicaragua,1977,5486.371089
+Americas,Nicaragua,1982,3470.338156
+Americas,Nicaragua,1987,2955.984375
+Americas,Nicaragua,1992,2170.151724
+Americas,Nicaragua,1997,2253.023004
+Americas,Nicaragua,2002,2474.548819
+Americas,Nicaragua,2007,2749.320965
+Americas,Panama,1952,2480.380334
+Americas,Panama,1957,2961.800905
+Americas,Panama,1962,3536.540301
+Americas,Panama,1967,4421.009084
+Americas,Panama,1972,5364.249663
+Americas,Panama,1977,5351.912144
+Americas,Panama,1982,7009.601598
+Americas,Panama,1987,7034.779161
+Americas,Panama,1992,6618.74305
+Americas,Panama,1997,7113.692252
+Americas,Panama,2002,7356.031934
+Americas,Panama,2007,9809.185636
+Americas,Paraguay,1952,1952.308701
+Americas,Paraguay,1957,2046.154706
+Americas,Paraguay,1962,2148.027146
+Americas,Paraguay,1967,2299.376311
+Americas,Paraguay,1972,2523.337977
+Americas,Paraguay,1977,3248.373311
+Americas,Paraguay,1982,4258.503604
+Americas,Paraguay,1987,3998.875695
+Americas,Paraguay,1992,4196.411078
+Americas,Paraguay,1997,4247.400261
+Americas,Paraguay,2002,3783.674243
+Americas,Paraguay,2007,4172.838464
+Americas,Peru,1952,3758.523437
+Americas,Peru,1957,4245.256698
+Americas,Peru,1962,4957.037982
+Americas,Peru,1967,5788.09333
+Americas,Peru,1972,5937.827283
+Americas,Peru,1977,6281.290855
+Americas,Peru,1982,6434.501797
+Americas,Peru,1987,6360.9434440000005
+Americas,Peru,1992,4446.380924
+Americas,Peru,1997,5838.347657
+Americas,Peru,2002,5909.020073
+Americas,Peru,2007,7408.905561
+Americas,Puerto Rico,1952,3081.959785
+Americas,Puerto Rico,1957,3907.156189
+Americas,Puerto Rico,1962,5108.34463
+Americas,Puerto Rico,1967,6929.277714
+Americas,Puerto Rico,1972,9123.041742
+Americas,Puerto Rico,1977,9770.524921
+Americas,Puerto Rico,1982,10330.98915
+Americas,Puerto Rico,1987,12281.34191
+Americas,Puerto Rico,1992,14641.58711
+Americas,Puerto Rico,1997,16999.4333
+Americas,Puerto Rico,2002,18855.60618
+Americas,Puerto Rico,2007,19328.70901
+Americas,Trinidad and Tobago,1952,3023.271928
+Americas,Trinidad and Tobago,1957,4100.3934
+Americas,Trinidad and Tobago,1962,4997.523971
+Americas,Trinidad and Tobago,1967,5621.368472
+Americas,Trinidad and Tobago,1972,6619.551419
+Americas,Trinidad and Tobago,1977,7899.554209
+Americas,Trinidad and Tobago,1982,9119.528607
+Americas,Trinidad and Tobago,1987,7388.597823
+Americas,Trinidad and Tobago,1992,7370.990932
+Americas,Trinidad and Tobago,1997,8792.573126
+Americas,Trinidad and Tobago,2002,11460.60023
+Americas,Trinidad and Tobago,2007,18008.50924
+Americas,United States,1952,13990.48208
+Americas,United States,1957,14847.12712
+Americas,United States,1962,16173.14586
+Americas,United States,1967,19530.36557
+Americas,United States,1972,21806.03594
+Americas,United States,1977,24072.63213
+Americas,United States,1982,25009.55914
+Americas,United States,1987,29884.35041
+Americas,United States,1992,32003.93224
+Americas,United States,1997,35767.43303
+Americas,United States,2002,39097.09955
+Americas,United States,2007,42951.65309
+Americas,Uruguay,1952,5716.766744
+Americas,Uruguay,1957,6150.772969
+Americas,Uruguay,1962,5603.357717
+Americas,Uruguay,1967,5444.61962
+Americas,Uruguay,1972,5703.408898
+Americas,Uruguay,1977,6504.339663
+Americas,Uruguay,1982,6920.223051
+Americas,Uruguay,1987,7452.398969
+Americas,Uruguay,1992,8137.004775
+Americas,Uruguay,1997,9230.240708
+Americas,Uruguay,2002,7727.002004
+Americas,Uruguay,2007,10611.46299
+Americas,Venezuela,1952,7689.799761
+Americas,Venezuela,1957,9802.466526
+Americas,Venezuela,1962,8422.974165
+Americas,Venezuela,1967,9541.474188
+Americas,Venezuela,1972,10505.25966
+Americas,Venezuela,1977,13143.95095
+Americas,Venezuela,1982,11152.41011
+Americas,Venezuela,1987,9883.584648
+Americas,Venezuela,1992,10733.92631
+Americas,Venezuela,1997,10165.49518
+Americas,Venezuela,2002,8605.047831
+Americas,Venezuela,2007,11415.80569
