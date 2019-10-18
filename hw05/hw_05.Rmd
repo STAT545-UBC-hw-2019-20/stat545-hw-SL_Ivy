@@ -21,6 +21,8 @@ library(gapminder)
 library(tidyverse)
 library(DT)
 library (here)
+library(grid)
+library(gridExtra)
 ```
 
 
@@ -99,23 +101,26 @@ levels(reo_continent)
 ```
 It can be found that Asia has the largest population size and Oceania has the smallest population size.
 
-```{r fig1, fig.align='center', fig.height=5, fig.width= 7}
-gapminder %>%
-  ggplot() +
-  geom_col(aes(reo_continent, pop, fill= reo_continent), width = 0.5) +
-  coord_flip()+   # flip x and y
-  theme_bw() +
-  ylab("Population") + xlab("Continent")+ggtitle('Reordered by the max pop')
-```
-```{r fig2, fig.align='center', fig.height=5, fig.width= 7}
-gapminder %>%
+
+We can compare the before and after reordered data set by ploting them here:
+```{r figs, fig.height=5, fig.width= 12}
+F1 <-gapminder %>%
   ggplot() +
   geom_col(aes(continent, pop), width = 0.5) +
   coord_flip()+   # flip x and y
   theme_bw() +
   ylab("Population") + xlab("Continent")+ggtitle('Original order')
 
+
+F2 <- gapminder %>%
+  ggplot() +
+  geom_col(aes(reo_continent, pop), width = 0.5) +
+  coord_flip()+   # flip x and y
+  theme_bw() +
+  ylab("Population") + xlab("Continent")+ggtitle('Reordered by the max pop')
+grid.arrange(F1, F2, nrow=1)
 ```
+
 
 
 ## Exercise 3: File input/output
@@ -185,13 +190,11 @@ old_figure <- ggplot(GDP_summary, aes(x=continent)) +
   ggtitle("Old")
 ```
 
-I think it would be better to change the plot type and reorder it by the average of GDP per Capital, and add individual observations:
+I think it would be better to change the plot type and reorder it by the median of GDP per Capital, and add individual observations:
 ```{r, message=FALSE, warning=FALSE, fig.width=15, fig.height=6}
 library(hrbrthemes)
 library(viridis)
-library(grid)
-library(gridExtra)
-new_order <- fct_reorder(gapminder$continent, gapminder$gdpPercap, mean)
+new_order <- fct_reorder(gapminder$continent, gapminder$gdpPercap, median)
 new_figure <- ggplot(gapminder, aes(new_order, gdpPercap, group = continent, colour = continent)) +
   geom_boxplot() +
   scale_y_log10(labels = scales::comma_format()) +
@@ -210,7 +213,7 @@ Use ggsave() to explicitly save a plot to file. Include the exported plot as par
 To save the improved figure chosen from the assigment 2 as `new_figure`:
 ```{r, message = FALSE, warning=FALSE}
 ggsave("new_figure.jpg",
-       plot =new_figure, #this in important, see the explaintion below the code chunk#
+       plot =new_figure, #specify the plot is important, see the explaintion below the code chunk
        width = 16, height =12, units = "cm")
 ```
 
