@@ -2,15 +2,13 @@
 title: "hw_05: Factor and figure management"
 author: "SL_Ivy"
 output: 
-  html_document: 
-    fig_height: 8
-    fig_width: 14
+  html_document:
+  toc: yes
+  toc_float: yes 
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+```{r, echo=FALSE}
+knitr::opts_chunk$set(error = TRUE)
 ```
-
 ## Goal
 
 The goal of this homework is to get expand the thinking about data portability, collaboration, and dissemination. In this assignment, we will also learn to import and export the datasets and practice effective plotting principles.
@@ -99,23 +97,23 @@ To reorder the contient by the maximum of population in an ascending order.
 reo_continent<-fct_reorder(gapminder$continent, gapminder$pop, max)
 levels(reo_continent)
 ```
-It can be found that
+It can be found that Asia has the largest population size and Oceania has the smallest population size.
 
-```{r}
+```{r fig1, fig.align='center', fig.height=5, fig.width= 7}
 gapminder %>%
   ggplot() +
-  geom_bar(aes(fct_reorder(continent, pop, max), fill=continent)) +
+  geom_col(aes(reo_continent, pop, fill= reo_continent), width = 0.5) +
   coord_flip()+   # flip x and y
   theme_bw() +
-  ylab("Number of entries") + xlab("Continent")+ggtitle('Reordered by the max pop')
+  ylab("Population") + xlab("Continent")+ggtitle('Reordered by the max pop')
 ```
-```{r}
+```{r fig2, fig.align='center', fig.height=5, fig.width= 7}
 gapminder %>%
   ggplot() +
-  geom_bar(aes(continent, fill= continent)) +
+  geom_col(aes(continent, pop), width = 0.5) +
   coord_flip()+   # flip x and y
   theme_bw() +
-  ylab("Number of entries") + xlab("Continent")+ggtitle('Original order')
+  ylab("Population") + xlab("Continent")+ggtitle('Original order')
 
 ```
 
@@ -161,13 +159,19 @@ reload_Am %>% ggplot(aes(reo_Am, gdpPercap, colour = country))+
 
 For the I/O method(s) you chose, comment on whether or not your newly created file survived the round trip of writing to file then reading back in.
 
+Run the code to check if the exported and imported data are identical
+```{r}
+summary(Americas_data.csv == reload_Am)
+```
+
+
 Based on the obeservation of the above session, it can be found that newly created file, *Amricas_data* was correctly export and stored in the designed file.Then it was able to be properly imported back. By using the `write_csv()/read_csv()` and `here::here(), the file can be easily addressed.
 
 ## Exercise 4: Visualization design
 Go back through your previous assignments and class participation activities and find figures you created prior to the last week of the course. Recreate at least one figure in light of something you learned in the recent class meetings about visualization design and color.
 
 I choose a plot that I did for my assigment 3, task option 2, which is shown in below:
-```{r}
+```{r, fig.width=5, fig.height=5}
 GDP_summary <- gapminder %>%
   select (continent, gdpPercap) %>%
   group_by(continent) %>%
@@ -179,11 +183,10 @@ old_figure <- ggplot(GDP_summary, aes(x=continent)) +
   geom_point(aes(y=Min_GDP, color="Min_GDP"))+
   scale_y_log10(labels = scales::comma_format())+
   ggtitle("Old")
-
 ```
 
 I think it would be better to change the plot type and reorder it by the average of GDP per Capital, and add individual observations:
-```{r, message=FALSE, warning=FALSE}
+```{r, message=FALSE, warning=FALSE, fig.width=15, fig.height=6}
 library(hrbrthemes)
 library(viridis)
 library(grid)
@@ -192,19 +195,30 @@ new_order <- fct_reorder(gapminder$continent, gapminder$gdpPercap, mean)
 new_figure <- ggplot(gapminder, aes(new_order, gdpPercap, group = continent, colour = continent)) +
   geom_boxplot() +
   scale_y_log10(labels = scales::comma_format()) +
-  ggtitle("new")+
+  ggtitle("New")+
   scale_fill_viridis(discrete = TRUE, alpha=0.6) +
     geom_jitter(color="dark blue", size=0.4, alpha=0.3) +
     theme_ipsum() +
     theme(
-      legend.position="none")+xlab("") 
+      legend.position="none")+xlab("")+ylab("GDP per Capital")
 grid.arrange(old_figure, new_figure, nrow=1)
 ```
 
 ## Exercise 5: Writing figures to file
+Use ggsave() to explicitly save a plot to file. Include the exported plot as part of your repository and assignment.
 
+To save the improved figure chosen from the assigment 2 as `new_figure`:
 ```{r, message = FALSE, warning=FALSE}
-ggsave("new_figure.jpg", width = 16, height =14, units = "cm")
+ggsave("new_figure.jpg",
+       plot =new_figure, #this in important, see the explaintion below the code chunk#
+       width = 16, height =12, units = "cm")
 ```
 
+Whithout speficication, `ggsave()` always save the last created plot. In this case, it won't preduce any different result, but it's a good practice to specify the exact plot for the future review (even the author can forget the details without proper reminder).
+
+And then to check if the plot was properly saved by reloading it here:
+
 ![Reload the new figure](new_figure.jpg)
+
+Or access as a web page. 
+See the [new figure](new_figure.jpg) on a new window,
