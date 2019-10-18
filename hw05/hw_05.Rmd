@@ -166,7 +166,7 @@ For the I/O method(s) you chose, comment on whether or not your newly created fi
 
 Run the code to check if the exported and imported data are identical
 ```{r}
-summary(Americas_data.csv == reload_Am)
+summary(Americas_data == reload_Am)
 ```
 
 
